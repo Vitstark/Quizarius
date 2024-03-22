@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+  <changeSet id="0" author="Vitaly">
+
+    <!-- HISTORY -->
+    <insert tableName="questions">
+      <column name="id">1</column>
+      <column name="category">HISTORY</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="questions">
+      <column name="id">2</column>
+      <column name="category">HISTORY</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="questions">
+      <column name="id">3</column>
+      <column name="category">HISTORY</column>
+      <column name="body"></column>
+    </insert>
+
+
+    <!-- CHEMISTRY -->
+    <insert tableName="questions">
+      <column name="id">4</column>
+      <column name="category">CHEMISTRY</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="questions">
+      <column name="id">5</column>
+      <column name="category">CHEMISTRY</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="questions">
+      <column name="id">6</column>
+      <column name="category">CHEMISTRY</column>
+      <column name="body"></column>
+    </insert>
+
+
+    <!-- PROGRAMMING -->
+    <insert tableName="questions">
+      <column name="id">7</column>
+      <column name="category">PROGRAMMING</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="questions">
+      <column name="id">8</column>
+      <column name="category">PROGRAMMING</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="questions">
+      <column name="id">9</column>
+      <column name="category">PROGRAMMING</column>
+      <column name="body"></column>
+    </insert>
+  </changeSet>
+
+  <changeSet id="1" author="Vitaly">
+    <!-- 1. History -->
+    <insert tableName="answers">
+      <column name="question_id">1</column>
+      <column name="is_correct">true</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">1</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">1</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">1</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">1</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+
+    <!-- 2. History -->
+    <insert tableName="answers">
+      <column name="question_id">2</column>
+      <column name="is_correct">true</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">2</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">2</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">2</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">2</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <!-- 3. History -->
+    <insert tableName="answers">
+      <column name="question_id">3</column>
+      <column name="is_correct">true</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">3</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">3</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">3</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">3</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <!-- 4. Chemistry -->
+    <insert tableName="answers">
+      <column name="question_id">4</column>
+      <column name="is_correct">true</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">4</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">4</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">4</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">4</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <!-- 5. Chemistry -->
+    <insert tableName="answers">
+      <column name="question_id">5</column>
+      <column name="is_correct">true</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">5</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">5</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">5</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">5</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <!-- 6. Chemistry -->
+    <insert tableName="answers">
+      <column name="question_id">6</column>
+      <column name="is_correct">true</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">6</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">6</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">6</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">6</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <!-- 7. Programming -->
+    <insert tableName="answers">
+      <column name="question_id">7</column>
+      <column name="is_correct">true</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">7</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">7</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">7</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">7</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <!-- 8. Programming -->
+    <insert tableName="answers">
+      <column name="question_id">8</column>
+      <column name="is_correct">true</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">8</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">8</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">8</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">8</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <!-- 9. Programming -->
+    <insert tableName="answers">
+      <column name="question_id">9</column>
+      <column name="is_correct">true</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">9</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">9</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">9</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+
+    <insert tableName="answers">
+      <column name="question_id">9</column>
+      <column name="is_correct">false</column>
+      <column name="body"></column>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

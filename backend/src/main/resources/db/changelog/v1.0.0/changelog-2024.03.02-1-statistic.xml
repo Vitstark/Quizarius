@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+  <changeSet id="0" author="Vitaly">
+      <sql>
+          CREATE TYPE answer_status as ENUM ('CORRECT', 'WRONG', 'ISSUED')
+      </sql>
+
+      <createTable tableName="statistic">
+          <column name="id" type="bigint" autoIncrement="true">
+              <constraints primaryKey="true" nullable="false"/>
+          </column>
+
+          <column name="status" type="answer_status" defaultValue="ISSUED">
+              <constraints nullable="false"/>
+          </column>
+
+          <column name="datetime" type="datetime">
+              <constraints nullable="false"/>
+          </column>
+
+          <column name="question_id" type="bigint">
+              <constraints nullable="false"
+                           referencedTableName="questions"
+                           referencedColumnNames="id"
+                           foreignKeyName="statistic_fk_question_id"/>
+          </column>
+
+          <column name="answer_id" type="bigint">
+              <constraints nullable="false"
+                           referencedTableName="answers"
+                           referencedColumnNames="id"
+                           foreignKeyName="statistic_fk_answer_id"/>
+          </column>
+
+          <column name="user_account_id" type="bigint">
+              <constraints nullable="true"
+                           referencedTableName="user_account"
+                           referencedColumnNames="id"
+                           foreignKeyName="statistic_fk_user_account_id"/>
+          </column>
+      </createTable>
+
+  </changeSet>
+</databaseChangeLog>

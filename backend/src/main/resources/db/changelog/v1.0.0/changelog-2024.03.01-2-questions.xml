@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+  <changeSet id="0" author="Vitaly">
+
+    <sql>
+      CREATE TYPE category AS ENUM ('CHEMISTRY', 'PROGRAMMING', 'HISTORY');
+    </sql>
+
+    <createTable tableName="questions">
+      <column name="id" type="bigint" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+
+      <column name="category" type="category">
+        <constraints nullable="false"/>
+      </column>
+
+      <column name="body" type="varchar(128)">
+        <constraints nullable="false"/>
+      </column>
+    </createTable>
+
+    <createTable tableName="answers">
+      <column name="id" type="bigint" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+
+      <column name="body" type="varchar(64)">
+        <constraints nullable="false"/>
+      </column>
+
+      <column name="is_correct" type="boolean" defaultValue="false">
+        <constraints nullable="false"/>
+      </column>
+
+      <column name="question_id" type="bigint">
+        <constraints nullable="false" referencedTableName="questions" referencedColumnNames="id" foreignKeyName="answers_fk_question_id"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+</databaseChangeLog>
