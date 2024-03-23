@@ -69,4 +69,11 @@ class QuestionDao(private val client: Pool, private val dsl: DSLContext) {
             .orderBy(rand())
             .fetch(client)
             .map(answerMapper)
+
+    fun isCorrect(questionId: Long, answerId: Long) = dsl
+        .select(ANSWERS.IS_CORRECT)
+        .from(ANSWERS)
+        .where(ANSWERS.QUESTION_ID.eq(questionId).and(ANSWERS.ID.eq(answerId)))
+        .fetchOne(client)
+        .map { row -> row.get(ANSWERS.IS_CORRECT) }
 }
