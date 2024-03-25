@@ -10,19 +10,19 @@
     <insert tableName="questions">
       <column name="id">1</column>
       <column name="category">HISTORY</column>
-      <column name="body"></column>
+      <column name="body">Кто был последним фараоном Древнего Египта?</column>
     </insert>
 
     <insert tableName="questions">
       <column name="id">2</column>
       <column name="category">HISTORY</column>
-      <column name="body"></column>
+      <column name="body">Какой год считается началом Великой Французской Революции?</column>
     </insert>
 
     <insert tableName="questions">
       <column name="id">3</column>
       <column name="category">HISTORY</column>
-      <column name="body"></column>
+      <column name="body">Какая страна стала первой колонизирующей Америку?</column>
     </insert>
 
 
@@ -30,19 +30,19 @@
     <insert tableName="questions">
       <column name="id">4</column>
       <column name="category">CHEMISTRY</column>
-      <column name="body"></column>
+      <column name="body">Какой элемент является основным компонентом воды?</column>
     </insert>
 
     <insert tableName="questions">
       <column name="id">5</column>
       <column name="category">CHEMISTRY</column>
-      <column name="body"></column>
+      <column name="body">Какой газ является самым распространенным в атмосфере Земли?</column>
     </insert>
 
     <insert tableName="questions">
       <column name="id">6</column>
       <column name="category">CHEMISTRY</column>
-      <column name="body"></column>
+      <column name="body">Какой элемент используется для создания железобетона?</column>
     </insert>
 
 
@@ -50,19 +50,19 @@
     <insert tableName="questions">
       <column name="id">7</column>
       <column name="category">PROGRAMMING</column>
-      <column name="body"></column>
+      <column name="body">Какой оператор используется для строгой проверки равенства значений в JavaScript?</column>
     </insert>
 
     <insert tableName="questions">
       <column name="id">8</column>
       <column name="category">PROGRAMMING</column>
-      <column name="body"></column>
+      <column name="body">Какой язык верстки чаще всего используется для веб-страничек?</column>
     </insert>
 
     <insert tableName="questions">
       <column name="id">9</column>
       <column name="category">PROGRAMMING</column>
-      <column name="body"></column>
+      <column name="body">Что означает ключевое слово "for" в большинстве ЯП?</column>
     </insert>
   </changeSet>
 
@@ -71,31 +71,31 @@
     <insert tableName="answers">
       <column name="question_id">1</column>
       <column name="is_correct">true</column>
-      <column name="body"></column>
+      <column name="body">Клеопатра</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">1</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Рамзес II</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">1</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Тутанхамон</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">1</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Хеопс</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">1</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Нефертити</column>
     </insert>
 
 
@@ -103,248 +103,248 @@
     <insert tableName="answers">
       <column name="question_id">2</column>
       <column name="is_correct">true</column>
-      <column name="body"></column>
+      <column name="body">1789</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">2</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">1804</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">2</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">1799</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">2</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">1830</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">2</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">1917</column>
     </insert>
 
     <!-- 3. History -->
     <insert tableName="answers">
       <column name="question_id">3</column>
       <column name="is_correct">true</column>
-      <column name="body"></column>
+      <column name="body">Испания</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">3</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Англия</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">3</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Португалия</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">3</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Франция</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">3</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Голландия</column>
     </insert>
 
     <!-- 4. Chemistry -->
     <insert tableName="answers">
       <column name="question_id">4</column>
       <column name="is_correct">true</column>
-      <column name="body"></column>
+      <column name="body">Водород</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">4</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Кислород</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">4</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Углерод</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">4</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Натрий</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">4</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Железо</column>
     </insert>
 
     <!-- 5. Chemistry -->
     <insert tableName="answers">
       <column name="question_id">5</column>
       <column name="is_correct">true</column>
-      <column name="body"></column>
+      <column name="body">Азот</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">5</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Кислород</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">5</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Углекислый газ</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">5</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Аргон</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">5</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Гелий</column>
     </insert>
 
     <!-- 6. Chemistry -->
     <insert tableName="answers">
       <column name="question_id">6</column>
       <column name="is_correct">true</column>
-      <column name="body"></column>
+      <column name="body">Железо</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">6</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Кальций</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">6</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Свинец</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">6</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Кремний</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">6</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Алюминий</column>
     </insert>
 
     <!-- 7. Programming -->
     <insert tableName="answers">
       <column name="question_id">7</column>
       <column name="is_correct">true</column>
-      <column name="body"></column>
+      <column name="body">===</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">7</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">==</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">7</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">=</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">7</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">!=</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">7</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">></column>
     </insert>
 
     <!-- 8. Programming -->
     <insert tableName="answers">
       <column name="question_id">8</column>
       <column name="is_correct">true</column>
-      <column name="body"></column>
+      <column name="body">HTML</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">8</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Python</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">8</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Java</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">8</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Ruby</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">8</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">PHP</column>
     </insert>
 
     <!-- 9. Programming -->
     <insert tableName="answers">
       <column name="question_id">9</column>
       <column name="is_correct">true</column>
-      <column name="body"></column>
+      <column name="body">Циклический оператор</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">9</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Условный оператор</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">9</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Оператор присваивания</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">9</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Оператор вывода данных</column>
     </insert>
 
     <insert tableName="answers">
       <column name="question_id">9</column>
       <column name="is_correct">false</column>
-      <column name="body"></column>
+      <column name="body">Оператор сравнения</column>
     </insert>
   </changeSet>
 </databaseChangeLog>

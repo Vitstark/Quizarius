@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+  <changeSet id="0" author="Vitaly">
+
+    <insert tableName="user_account">
+      <column name="id">1</column>
+      <column name="email">quizarius@itis.ru</column>
+      <column name="password">quizarius</column>
+      <column name="created">2024-03-26 00:00:00</column>
+    </insert>
+
+  </changeSet>
+</databaseChangeLog>

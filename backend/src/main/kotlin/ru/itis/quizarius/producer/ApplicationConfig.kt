@@ -18,7 +18,7 @@ import org.jooq.impl.DefaultConfiguration
  */
 
 @ApplicationScoped
-class ApplicationProducer(
+class ApplicationConfig(
     @ConfigProperty(name = "quarkus.datasource.reactive.url") val url: String,
     @ConfigProperty(name = "quarkus.datasource.username") val username: String,
     @ConfigProperty(name = "quarkus.datasource.password") val password: String
@@ -42,5 +42,4 @@ class ApplicationProducer(
         configuration.settings().renderKeywordCase = RenderKeywordCase.LOWER
         return configuration
     }
-
 }

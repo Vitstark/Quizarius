@@ -16,7 +16,7 @@ import org.jooq.conf.ParamType
  * @author Vitaly Chekushkin
  */
 
-// jOOQ select fetch extensions
+// jOOQ extensions
 
 fun <R: Record?, T> Select<R>.fetchOne(pool: Pool, field: Field<T>): Uni<T> {
     return this.fetchOne(pool)
