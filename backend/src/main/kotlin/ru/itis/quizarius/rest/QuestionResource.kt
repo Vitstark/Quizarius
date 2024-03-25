@@ -1,5 +1,6 @@
 package ru.itis.quizarius.rest
 
+import io.quarkus.security.Authenticated
 import jakarta.ws.rs.ApplicationPath
 import jakarta.ws.rs.Consumes
 import jakarta.ws.rs.GET
@@ -16,6 +17,7 @@ import ru.itis.quizarius.service.QuestionService
  */
 
 @ApplicationPath("/questions")
+@Authenticated
 class QuestionResource(val questionService: QuestionService) {
 
     @GET

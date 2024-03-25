@@ -7,5 +7,7 @@
   <include file="v1.0.0/changelog-2024.03.01-1-user_account.xml" relativeToChangelogFile="true"/>
   <include file="v1.0.0/changelog-2024.03.01-2-questions.xml" relativeToChangelogFile="true"/>
   <include file="v1.0.0/changelog-2024.03.02-1-statistic.xml" relativeToChangelogFile="true"/>
+  <include file="v1.0.0/changelog-2024.03.09-1-questions.xml" relativeToChangelogFile="true"/>
+  <include file="v1.0.0/changelog-2024.03.26-1-create_default_user.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>

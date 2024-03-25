@@ -22,14 +22,17 @@ class StatisticDao(val pool: PgPool, val dsl: DSLContext) {
         StatisticRecord(
             row.get(STATISTIC.ID),
             row.get(STATISTIC.STATUS),
+            row.get(STATISTIC.DATETIME),
             row.get(STATISTIC.QUESTION_ID),
+            row.get(STATISTIC.ANSWER_ID),
             row.get(STATISTIC.USER_ACCOUNT_ID)
         )
     }
 
-    fun getByid(statisticId: Long) = dsl
+    fun getBy(statisticId: Long, userAccountId: Long) = dsl
         .selectFrom(STATISTIC)
         .where(STATISTIC.ID.eq(statisticId))
+        .and(STATISTIC.USER_ACCOUNT_ID.eq(userAccountId))
         .fetchOne(pool)
         .map(mapper)
 

@@ -15,7 +15,7 @@ import ru.itis.quizarius.dto.User
  */
 
 @Singleton
-class UserDao(private val client: Pool, private val dsl: DSLContext) {
+class UserDao(private val pool: Pool, private val dsl: DSLContext) {
 
     private val mapper: (Row) -> User = { row: Row ->
         User(
@@ -24,9 +24,17 @@ class UserDao(private val client: Pool, private val dsl: DSLContext) {
         )
     }
 
-    fun getUserById(id: Long) = dsl.select(asterisk())
+    fun getUser(id: Long) = dsl
+        .select(asterisk())
         .from(USER_ACCOUNT)
-        .where(USER_ACCOUNT.ID.eq(id).or(USER_ACCOUNT.ID.eq(2)))
-        .fetchOne(client)
+        .where(USER_ACCOUNT.ID.eq(id))
+        .fetchOne(pool)
+        .map(mapper)
+
+    fun getUser(email: String, password: String) = dsl
+        .select(asterisk())
+        .from(USER_ACCOUNT)
+        .where(USER_ACCOUNT.EMAIL.eq(email).and(USER_ACCOUNT.PASSWORD.eq(password)))
+        .fetchOne(pool)
         .map(mapper)
 }
