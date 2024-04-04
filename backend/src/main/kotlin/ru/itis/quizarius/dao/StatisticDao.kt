@@ -10,6 +10,7 @@ import org.jooq.quizarius.tables.references.STATISTIC
 import ru.itis.extensions.execute
 import ru.itis.extensions.fetchOne
 import ru.itis.extensions.get
+import java.time.LocalDateTime
 
 /**
  * @author Vitaly Chekushkin
@@ -37,8 +38,8 @@ class StatisticDao(val pool: PgPool, val dsl: DSLContext) {
         .map(mapper)
 
     fun recordGiveQuestion(questionId: Long, userId: Long?) = dsl
-        .insertInto(STATISTIC, STATISTIC.QUESTION_ID, STATISTIC.USER_ACCOUNT_ID)
-        .values(questionId, userId)
+        .insertInto(STATISTIC, STATISTIC.QUESTION_ID, STATISTIC.USER_ACCOUNT_ID, STATISTIC.DATETIME)
+        .values(questionId, userId, LocalDateTime.now())
         .returning(STATISTIC.ID)
         .execute(pool, STATISTIC.ID)
 
