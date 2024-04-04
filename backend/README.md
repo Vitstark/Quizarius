@@ -8,4 +8,4 @@
 #### Swagger: /q/swagger-ui/
 #### Пользователь по умолчанию: login: quizarius@itis.ru, password: quizarius
 #### Для получения токена отправить логин и пароль на /security/authenticate
-#### Токен присылать в заголоке Authorization
+#### Токен присылать в заголоке Authorization с префиксом Bearer

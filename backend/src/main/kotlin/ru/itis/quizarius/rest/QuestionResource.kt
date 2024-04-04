@@ -16,7 +16,7 @@ import ru.itis.quizarius.service.QuestionService
  * @author Vitaly Chekushkin
  */
 
-@ApplicationPath("/questions")
+@Path("/questions")
 @Authenticated
 class QuestionResource(val questionService: QuestionService) {
 

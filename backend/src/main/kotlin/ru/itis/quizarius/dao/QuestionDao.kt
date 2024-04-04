@@ -51,17 +51,20 @@ class QuestionDao(private val client: Pool, private val dsl: DSLContext) {
         .limit(1)
         .fetchOne(client, QUESTIONS.ID)
 
-    fun getAnswersByQuestionId(questionId: Long) = dsl.select(asterisk())
-        .from(ANSWERS)
-        .where(ANSWERS.QUESTION_ID.eq(questionId))
-        .and(ANSWERS.IS_CORRECT.isTrue)
-        .union(
+    fun getAnswersByQuestionId(questionId: Long) = dsl
+        .select(asterisk())
+        .from(
+            dsl.select(asterisk())
+                .from(ANSWERS)
+                .where(ANSWERS.QUESTION_ID.eq(questionId))
+                .and(ANSWERS.IS_CORRECT.isTrue)
+                .unionAll(
             dsl.select(asterisk())
                 .from(ANSWERS)
                 .where(ANSWERS.QUESTION_ID.eq(questionId))
                 .and(ANSWERS.IS_CORRECT.isFalse)
                 .orderBy(rand())
-                .limit(3)
+                .limit(3))
         )
         .orderBy(rand())
         .fetch(client)
