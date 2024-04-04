@@ -10,6 +10,7 @@ import jakarta.ws.rs.Path
 import jakarta.ws.rs.Produces
 import jakarta.ws.rs.core.MediaType
 import ru.itis.security.dto.Credentials
+import ru.itis.security.dto.Key
 import ru.itis.security.service.SecurityService
 
 /**
@@ -30,8 +31,9 @@ class SecurityResource(
     @POST
     @Path("/authenticate")
     @PermitAll
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    fun authenticate(credentials: Credentials): Uni<String> = securityService
+    fun authenticate(credentials: Credentials): Uni<Key> = securityService
         .authenticate(credentials.login, credentials.password)
+        .map { key -> Key(key) }
 }
