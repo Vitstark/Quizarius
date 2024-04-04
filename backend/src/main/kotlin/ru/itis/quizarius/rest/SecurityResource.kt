@@ -25,7 +25,7 @@ class SecurityResource(
     @Path("/identity")
     @Authenticated
     @Produces(MediaType.APPLICATION_JSON)
-    fun identity() = securityService.getAuthenticatedUser();
+    fun identity() = securityService.getAuthenticatedUser()
 
     @POST
     @Path("/authenticate")
