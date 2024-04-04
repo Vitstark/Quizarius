@@ -25,7 +25,12 @@ fun <R: Record?, T> Select<R>.fetchOne(pool: Pool, field: Field<T>): Uni<T> {
 
 fun <R : Record?> Select<R>.fetchOne(pool: Pool): Uni<Row> {
     return pool.executePreparedQuery(this)
-        .map { rs -> rs.iterator().next() }
+        .map { rs ->
+            if (rs.iterator().hasNext())
+                rs.iterator().next()
+            else
+                null
+        }
 }
 
 fun <R : Record?> Select<R>.fetch(pool: Pool): Multi<Row> {

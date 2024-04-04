@@ -75,5 +75,5 @@ class QuestionDao(private val client: Pool, private val dsl: DSLContext) {
         .from(ANSWERS)
         .where(ANSWERS.QUESTION_ID.eq(questionId).and(ANSWERS.ID.eq(answerId)))
         .fetchOne(client)
-        .map { row -> row.get(ANSWERS.IS_CORRECT) }
+        .map { row -> if (row != null) row.get(ANSWERS.IS_CORRECT) else false }
 }

@@ -47,5 +47,6 @@ class StatisticDao(val pool: PgPool, val dsl: DSLContext) {
         .update(STATISTIC)
         .set(STATISTIC.STATUS, answerStatus)
         .where(STATISTIC.ID.eq(id))
+        .returning(STATISTIC.STATUS)
         .execute(pool, STATISTIC.STATUS)
 }
