@@ -38,7 +38,12 @@ fun <R : Record?> Select<R>.fetch(pool: Pool): Multi<Row> {
 
 fun <T> Query.execute(pool: Pool, field: Field<T>): Uni<T>? {
     return pool.executePreparedQuery(this)
-        .map { rs -> rs.iterator().next().get(field) }
+        .map { rs ->
+            if (rs.iterator().hasNext())
+                rs.iterator().next().get(field)
+            else
+                null
+        }
 }
 
 // jOOQ params extensions
