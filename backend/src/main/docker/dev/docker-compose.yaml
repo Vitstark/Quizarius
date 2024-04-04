@@ -8,5 +8,3 @@ services:
       POSTGRES_PASSWORD: quizarius
     volumes:
       - ~/volumes/postgres:/var/lib/postgresql
-
-
