@@ -30,8 +30,7 @@
           </column>
 
           <column name="answer_id" type="bigint">
-              <constraints nullable="false"
-                           referencedTableName="answers"
+              <constraints referencedTableName="answers"
                            referencedColumnNames="id"
                            foreignKeyName="statistic_fk_answer_id"/>
           </column>

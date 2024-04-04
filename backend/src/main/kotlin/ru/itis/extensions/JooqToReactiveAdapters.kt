@@ -44,8 +44,7 @@ fun <T> Query.execute(pool: Pool, field: Field<T>): Uni<T>? {
 // jOOQ params extensions
 
 fun <R : Record?> Select<R>.getParamsTuple(): Tuple {
-    return this.params
-        .map { it.value.value }
+    return this.bindValues
         .let { Tuple.from(it) }
 }
 
